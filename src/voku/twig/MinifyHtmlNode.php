@@ -1,6 +1,6 @@
 <?php
 
-namespace voku\twig;
+namespace Voku\Twig;
 
 use Twig\Compiler;
 use Twig\Node\Node;
@@ -29,7 +29,7 @@ class MinifyHtmlNode extends Node
             ->addDebugInfo($this)
             ->write("ob_start();\n")
             ->subcompile($this->getNode('body'))
-            ->write('$extension = $this->env->getExtension(\'\\voku\\twig\\MinifyHtmlExtension\');' . "\n")
+            ->write('$extension = $this->env->getExtension(\'\\Voku\\Twig\\MinifyHtmlExtension\');' . "\n")
             ->write('echo $extension->compress($this->env, ob_get_clean());' . "\n");
     }
 }

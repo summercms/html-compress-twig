@@ -42,23 +42,23 @@ composer require voku/html-compress-twig
 First register the extension with Twig:
 
 ```php
-use voku\helper\HtmlMin;
-use voku\twig\MinifyHtmlExtension;
+use Voku\Helper\HtmlMin;
+use Voku\Twig\MinifyHtmlExtension;
 
 $twig = new \Twig\Environment($loader);
 $minifier = new HtmlMin();
 $twig->addExtension(new MinifyHtmlExtension($minifier));
 ```
 
-### Register extension in symfony 4
+### Register extension in symfony 5
 Specifying HtmlMin is needed for the autowiring.
 
 ```yaml
-    voku\helper\HtmlMin:
+    Voku\Helper\HtmlMin:
         tags:
             - { name: HtmlMin }
 
-    voku\twig\MinifyHtmlExtension:
+    Voku\Twig\MinifyHtmlExtension:
         arguments:
             $forceCompression: false
         tags:

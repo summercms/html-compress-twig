@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace voku\twig;
+namespace Voku\Twig;
 
 use Twig\Token;
 use Twig\TokenParser\AbstractTokenParser;

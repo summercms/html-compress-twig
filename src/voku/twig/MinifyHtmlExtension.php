@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace voku\twig;
+namespace Voku\Twig;
 
 use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use voku\cache\Cache;
-use voku\helper\HtmlMin;
+use Voku\Cache\Cache;
+use Voku\Helper\HtmlMin;
 
 class MinifyHtmlExtension extends AbstractExtension
 {
